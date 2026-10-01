@@ -283,8 +283,23 @@ html, body {
     margin: 0 auto;
     padding: 0.75rem 1rem;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Apila el logo y la lista en vertical */
+        gap: 0.5rem;
+    }
+
+    .navbar-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
 }
 
 /* Marca / Logotipo */
