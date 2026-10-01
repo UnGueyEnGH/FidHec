@@ -75,12 +75,8 @@ WSGI_APPLICATION = 'proieto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'UnGueyEnPython$cecytem',        # Ejemplo: UnGueyEnPython$default
-        'USER': 'UnGueyEnPython',
-        'PASSWORD': '1234',
-        'HOST': 'UnGueyEnPython.mysql.pythonanywhere-services.com',  # El host provisto en la pestaña Databases
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
