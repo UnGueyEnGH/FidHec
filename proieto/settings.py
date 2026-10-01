@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hi0i@grdsv%okbyf%7r#6i^&qm@2z_cz!mo453u4_#hqx@f3r+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '< UnGueyEnPython>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'ungueyenpython.pythonanywhere.com']
 
 
 # Application definition
@@ -76,12 +76,11 @@ WSGI_APPLICATION = 'proieto.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cecytem',
-        'USER': 'root',
+        'NAME': 'UnGueyEnPython$cecytem',        # Ejemplo: UnGueyEnPython$default
+        'USER': 'UnGueyEnPython',
         'PASSWORD': '1234',
-        'HOST':'127.0.0.1',
-        'PORT':'3306',
-
+        'HOST': 'UnGueyEnPython.mysql.pythonanywhere-services.com',  # El host provisto en la pestaña Databases
+        'PORT': '3306',
     }
 }
 
