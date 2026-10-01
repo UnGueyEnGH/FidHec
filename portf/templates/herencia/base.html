@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Cecytem</title>
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    {% if messages %}
+        <div class="mensajes">
+            {% for message in messages %}
+                <div class="alerta {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% include "herencia/navbar.html" %}
+
+    <main>
+        
+        {% block content %}
+        {% endblock %}
+        
+        {% include "herencia/footer.html" %}
+
+    </main>
+
+    <script>
+        setTimeout(function() {
+            const mensajes = document.querySelectorAll('.alerta');
+
+            mensajes.forEach(function(msg) {
+                msg.style.opacity = "0";
+
+                setTimeout(() => {
+                    msg.remove();
+                }, 500);
+            });
+
+        }, 3000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+ento/
+myvenv/
+env/
+venv/
+*.pyc
+*~
+__pycache__/
+db.sqlite3
+.DS_Store
+Thumbs.db
+*.exe

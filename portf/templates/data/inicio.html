@@ -1,0 +1,115 @@
+{% extends "herencia/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Hoja de estilos específica del portafolio -->
+<link rel="stylesheet" href="{% static 'css/presentacion.css' %}">
+
+<div class="portfolio-container">
+    <div class="portfolio-wrapper">
+        
+        <!-- Encabezado Principal -->
+        <header class="portfolio-header">
+            <span class="badge">Portafolio de Evidencias</span>
+            <h1 class="main-title">Proyectos de Desarrollo Web</h1>
+            <p class="subtitle">
+                Espacio dedicado a la exhibición, documentación y seguimiento de las aplicaciones desarrolladas durante el curso.
+            </p>
+        </header>
+
+        <!-- Sección: ¿Qué es este portafolio? -->
+        <section class="info-card">
+            <div class="info-card-content">
+                <div class="info-icon">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                </div>
+                <div class="info-text">
+                    <h2>¿Qué es este portafolio?</h2>
+                    <p>
+                        Este portafolio digital funciona como un <strong>registro dinámico e integral</strong> de las soluciones de software construidas a lo largo de las asignaturas. Aquí se recopilan tanto el código fuente, la arquitectura de base de datos, interfaces de usuario y la lógica de negocio implementada en cada proyecto.
+                    </p>
+                    <p class="secondary-text">
+                        Su objetivo principal es demostrar el dominio técnico adquirido en el diseño, desarrollo y despliegue de aplicaciones web funcionales.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Materias y Proyectos -->
+        <section class="subjects-section">
+            <h2 class="section-title">Materias y Áreas de Enfoque</h2>
+
+            <div class="subjects-grid">
+                
+                <!-- Tarjeta Materia 1 -->
+                <article class="subject-card card-blue">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="subject-tag tag-blue">Materia / Submódulo 1</span>
+                            <span class="status-dot dot-blue"></span>
+                        </div>
+                        <h3 class="subject-title">Construye Aplicaciones Web</h3>
+                        <p class="subject-description">
+                            Enfoque centrado en la maquetación, diseño de interfaz (Frontend), interactividad del usuario y los fundamentos de la estructura e integración de tecnologías web modernas.
+                        </p>
+                        
+                        <div class="competencies">
+                            <h4>Competencias clave:</h4>
+                            <ul>
+                                <li>Diseño HTML5, CSS3 y JavaScript responsive</li>
+                                <li>Uso de plantillas y componentes reutilizables</li>
+                                <li>Consumo e integración de interfaces web</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="#" class="card-link link-blue">
+                            Ver proyectos de esta materia
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta Materia 2 -->
+                <article class="subject-card card-green">
+                    <div class="card-body">
+                        <div class="card-header">
+                            <span class="subject-tag tag-green">Materia / Submódulo 2</span>
+                            <span class="status-dot dot-green"></span>
+                        </div>
+                        <h3 class="subject-title">Desarrolla Aplicaciones Web en un Sistema de Información</h3>
+                        <p class="subject-description">
+                            Orientado al desarrollo Backend, gestión de bases de datos, lógica de negocio complejos, operaciones CRUD y la integración completa de sistemas orientados a la gestión de datos.
+                        </p>
+                        
+                        <div class="competencies">
+                            <h4>Competencias clave:</h4>
+                            <ul>
+                                <li>Modelado y gestión de bases de datos relacionales</li>
+                                <li>Desarrollo de lógica en el servidor (Django / Python)</li>
+                                <li>Implementación de operaciones CRUD y autenticación</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="#" class="card-link link-green">
+                            Ver proyectos de esta materia
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+{% endblock %}

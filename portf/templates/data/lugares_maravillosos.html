@@ -1,0 +1,265 @@
+{% extends "herencia/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Enlace a la hoja de estilos compartida con el formato de metas -->
+<link rel="stylesheet" href="{% static 'css/metas.css' %}">
+
+<section class="metas-container">
+    
+    <!-- Encabezado Principal / Hero Section -->
+    <div class="metas-hero">
+        <div class="metas-hero-text">
+            <span class="metas-badge">Geografía & Maravillas Naturales</span>
+            
+            <div class="class-encabezado">
+                <h1>Santuarios Naturales: <span class="metas-highlight">Un Recorrido Global</span></h1>
+            </div>
+
+            <h2>Explorando los ecosistemas más fascinantes de cada continente a través de mi perspectiva.</h2>
+            
+            <p class="metas-intro">
+                Siempre me ha fascinado la capacidad de la naturaleza para construir sistemas complejos, equilibrados y llenos de vida en cada rincón del planeta. Desde los entornos más remotos e inhóspitos hasta los refugios cotidianos donde encontramos calma, cada continente alberga un espacio único que vale la pena comprender y proteger.
+            </p>
+            <p class="metas-intro">
+                Esta es mi selección personal de reservas y santuarios naturales alrededor del mundo: una mirada a la diversidad biológica, geológica y personal que hace que nuestro entorno sea tan extraordinario.
+            </p>
+        </div>
+
+        <div class="metas-hero-image-wrapper">
+            <div class="image-frame">
+                <img src="{% static 'images/lugares/planeta_naturaleza.jpg' %}" alt="Naturaleza global">
+            </div>
+            <p class="image-caption">Diversidad y ecosistemas alrededor del mundo.</p>
+        </div>
+    </div>
+
+    <!-- Sección Intermedia: Manifiesto / Filosofía sobre la Naturaleza -->
+    <article class="meta-card manifesto-box">
+        <h3>La Importancia de los Santuarios Naturales</h3>
+        <p>
+            Para mí, una reserva natural no es solo un mapa protegido en el papel; es un recordatorio de la resiliencia de la Tierra. Son lugares donde los procesos biológicos y geológicos fluyen sin la intervención destructiva del ser humano, sirviendo como reguladores del clima mundial y refugios indispensables de biodiversidad.
+        </p>
+        <p>
+            Aprender sobre estos espacios nos enseña a valorar la fragilidad de nuestro entorno y a entender que el verdadero equilibrio requiere protección, respeto y constante observación.
+        </p>
+    </article>
+
+    <!-- LISTADO DE RESERVAS POR CONTINENTE -->
+    <div class="metas-rows-layout">
+
+        <!-- 1. AMÉRICA -->
+        <!-- 1. AMÉRICA -->
+        <article class="meta-row-card card-corto">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Continente Americano</span>
+                <h2>América: Parque Nacional Barranca del Cupatitzio (Uruapan, México)</h2>
+                <p class="row-subtitle">Un oasis de vegetación exuberante, manantiales y la cuna del "río que canta".</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Una reserva natural protegida enclavada en el corazón de Michoacán, caracterizada por sus nacimientos de agua y bosque mesófilo de montaña.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            Lo que más me atrapa del Parque Nacional de Uruapan es la fuerza con la que emerge la vida a través del agua. Ver nacer el río en el manantial de "La Rodilla del Diablo" y recorrer sus senderos rodeados de densa vegetación tropical, fuentes artesanales y caídas de agua constantes es una experiencia única. Me parece increíble cómo este microclima húmedo y vivo se conserva intacto dentro de la zona urbana, funcionando como un pulmón verde indispensable y un refugio histórico para la región.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/parque_uruapan.jpg' %}" alt="Parque Nacional Barranca del Cupatitzio en Uruapan">
+                    </div>        
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/parque_uruapan2.jpg' %}" alt="Parque Nacional Barranca del Cupatitzio en Uruapan">
+                    </div>
+                    <p class="image-caption">Manantiales y vegetación en la Barranca del Cupatitzio.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2. ÁFRICA -->
+        <article class="meta-row-card card-mediano">
+            <div class="row-header">
+                <span class="tag-plazo tag-mediano">Continente Africano</span>
+                <h2>África: Reserva Nacional del Masái Mara (Kenia)</h2>
+                <p class="row-subtitle">La máxima expresión de la vida silvestre en movimiento constante.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Un escenario natural dominado por la sabana abierta y el pulso implacable de la naturaleza.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            Lo que más me asombra del Masái Mara es presenciar la Gran Migración. Me parece increíble cómo millones de animales se desplazan en sincronía perfecta siguiendo las lluvias y el alimento, desafiando ríos llenos de depredadores. Es la representación más pura del instinto de supervivencia y de un ecosistema que autorregula sus recursos sin intervención humana.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/masai_mara.jpg' %}" alt="Reserva Nacional del Masái Mara">
+                    </div>
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/masai_mara2.jpg' %}" alt="Reserva Nacional del Masái Mara">
+                    </div>
+                    <p class="image-caption">La sabana en plena temporada de migración.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3. ASIA -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-largo">Continente Asiático</span>
+                <h2>Asia: Reserva Natural de Jiuzhaigou (China)</h2>
+                <p class="row-subtitle">Ingeniería geológica natural entre bosques y lagos turquesa.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Un sistema hídrico único enclavado en los bordes de la meseta tibetana.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            Me resulta alucinante la claridad de sus aguas y las tonalidades esmeralda y turquesa de sus lagos, provocadas por la alta concentración de carbonato de calcio. Además de ser un espectáculo visual con sus cascadas escalonadas, me impresiona que sirva como refugio vital para especies en peligro extremo como el panda gigante.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">                   
+                        <img src="{% static 'images/lugares/jiuzhaigou.jpg' %}" alt="Reserva Natural de Jiuzhaigou">
+                    </div>
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/jiuzhaigou2.jpg' %}" alt="Reserva Natural de Jiuzhaigou">
+                    </div>
+                    <p class="image-caption">Lagos cristalinos y barreras minerales calcáreas.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4. EUROPA -->
+        <article class="meta-row-card card-corto">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Continente Europeo</span>
+                <h2>Europa: Parque Nacional de los Lagos de Plitvice (Croacia)</h2>
+                <p class="row-subtitle">La arquitectura viva de las barreras de travertino y cascadas interconectadas.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Un laboratorio químico e hídrico que cambia de forma continuamente.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            Lo que encuentro fascinante de Plitvice es que es un paisaje dinámico que se construye a sí mismo. Las barreras de travertino se forman constantemente por la acumulación de musgos, algas y minerales en el agua, creando 16 lagos interconectados por cascadas. Es la demostración de cómo el agua y los minerales pueden esculpir obras complejas a lo largo de miles de años.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/plitvice.jpg' %}" alt="Lagos de Plitvice">
+                    </div>
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/plitvice2.jpg' %}" alt="Lagos de Plitvice">
+                    </div>
+                    <p class="image-caption">Cascadas interconectadas en el bosque primario.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5. OCEANÍA -->
+        <article class="meta-row-card card-mediano">
+            <div class="row-header">
+                <span class="tag-plazo tag-mediano">Continente de Oceanía</span>
+                <h2>Oceanía: Parque Nacional Kakadu (Australia)</h2>
+                <p class="row-subtitle">Historia viva, megadiversidad y conexiones milenarias.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Un territorio gigante que une selva, humedales y abismos de piedra arenisca.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            Me atrae de Kakadu la mezcla entre su naturaleza indómita (como los imponentes cocodrilos de agua salada) y la profundidad de su historia humana. Conserva pinturas rupestres aborígenes de más de 20,000 años, lo que demuestra cómo las poblaciones ancestrales coexistieron de forma sostenible con ecosistemas extremos durante milenios.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/kakadu.jpg' %}" alt="Parque Nacional Kakadu">
+                    </div>
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/kakadu2.jpg' %}" alt="Parque Nacional Kakadu">
+                    </div>
+                    <p class="image-caption">Humedales y escarpas de piedra en el Territorio del Norte.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6. ANTÁRTIDA -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-largo">Continente Antártico</span>
+                <h2>Antártida: Reserva Marina del Mar de Ross</h2>
+                <p class="row-subtitle">El santuario oceánico más aislado e inexplorado del planeta.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Una gigantesca área marina protegida bajo las condiciones más extremas de la Tierra.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>¿Por qué me parece fascinante?</h4>
+                        <p>
+                            El Mar de Ross me genera un enorme respeto porque es uno de los pocos lugares del mundo que se mantiene casi intacto de la contaminación humana. Me parece sorprendente cómo la vida florece bajo condiciones de frío extremo, albergando las mayores poblaciones de pingüinos Adelia, petreles y orcas en un ecosistema que sirve como termómetro crítico para el cambio climático global.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/mar_de_ross.jpg' %}" alt="Antártida: Reserva Marina del Mar de Ross">
+                    </div>
+                    <div class="card-image-box">
+                        <img src="{% static 'images/lugares/mar_de_ross2.jpg' %}" alt="Antártida: Reserva Marina del Mar de Ross">
+                    <p class="image-caption">Ecosistemas marinos protegidos en el Océano Antártico.</p>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Reflexión Final / Cierre -->
+    <div class="metas-footer-quote">
+        <blockquote>
+            "Ya sea en el corazón de la Antártida o entre las cuatro paredes de nuestro propio hogar, conservar un espacio propio y respetarlo es el primer paso para entender la vida."
+        </blockquote>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% load static %}
+<!-- Hoja de estilos de la Navbar -->
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<header class="navbar-header">
+    <div class="navbar-container">
+        
+        <!-- Logotipo / Marca -->
+        <a href="https://cecytem.edomex.gob.mx/" class="navbar-brand">
+            <span class="brand-badge">CECYTEM</span>
+        </a>
+ 
+        <!-- Navegación Principal -->
+        <nav class="navbar-menu" id="navbarMenu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="{% url 'inicio' %}" class="nav-link active">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'metas' %}" class="nav-link">Metas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'lugares' %}" class="nav-link">Lugares</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Proyectos</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+</header>
+
+<!-- Script ligero para desplegar el menú móvil -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('navbarToggle');
+        const menu = document.getElementById('navbarMenu');
+
+        if (toggleBtn && menu) {
+            toggleBtn.addEventListener('click', function() {
+                menu.classList.toggle('is-active');
+            });
+        }
+    });
+</script>

@@ -1,0 +1,762 @@
+/* --- Variables y Estilos Base --- */
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --border-color: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --indigo-primary: #6366f1;
+    --indigo-light: #818cf8;
+    --emerald-primary: #10b981;
+    --emerald-light: #34d399;
+}
+
+/* static/css/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0f172a; /* Mismo color del fondo del portafolio */
+}
+.portfolio-container {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    padding: 3rem 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.portfolio-wrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* --- Encabezado --- */
+.portfolio-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #4338ca;
+    color: #e0e7ff;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 0.75rem 0;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* --- Tarjeta de Información (¿Qué es el portafolio?) --- */
+.info-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.info-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.info-icon {
+    padding: 0.75rem;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--indigo-light);
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+.icon-svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.info-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.info-text p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+}
+
+.info-text .secondary-text {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* --- Sección de Materias --- */
+.subjects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Tarjetas de Materia --- */
+.subject-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s ease;
+}
+
+.subject-card.card-blue:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.subject-card.card-green:hover {
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.subject-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tag-blue { color: var(--indigo-light); }
+.tag-green { color: var(--emerald-light); }
+
+.status-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+}
+
+.dot-blue { background-color: var(--indigo-primary); }
+.dot-green { background-color: var(--emerald-primary); }
+
+.subject-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+}
+
+.subject-description {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.competencies h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+}
+
+.competencies ul {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.competencies li {
+    margin-bottom: 0.25rem;
+}
+
+.card-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-blue { color: var(--indigo-light); }
+.link-blue:hover { color: #a5b4fc; }
+
+.link-green { color: var(--emerald-light); }
+.link-green:hover { color: #6ee7b7; }
+
+.arrow-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+}
+
+/* static/css/presentacion.css */
+
+.portfolio-container {
+    width: 100%;
+    min-height: 100%;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 3rem 1rem;
+}
+
+/* --- Estilos de la Barra de Navegación --- */
+:root {
+    --nav-bg: #1e293b;
+    --nav-border: #334155;
+    --text-light: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-blue: #6366f1;
+    --accent-blue-hover: #4f46e5;
+}
+
+.navbar-header {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+.navbar-container {
+    max-width: 103rem;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+/* Marca / Logotipo */
+.navbar-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.brand-badge {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    align-items: baseline;
+    justify-content: baseline;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    letter-spacing: 0.05em;
+}
+
+.brand-text {
+    color: var(--text-light);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* Botón Hamburguesa */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.navbar-toggle:hover {
+    color: var(--text-light);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hamburger-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Menú de Navegación */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-light);
+}
+
+/* Botones y Acciones */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-greeting {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.user-greeting strong {
+    color: var(--text-light);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.4rem 0.875rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue-hover);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Adaptabilidad Móvil --- */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg);
+        border-bottom: 1px solid var(--nav-border);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.25rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar-menu.is-active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .nav-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid var(--nav-border);
+        padding-top: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ==========================================
+   HOJA DE ESTILOS: METAS Y HOJA DE RUTA
+   ========================================== */
+
+:root {
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --bg-card-hover: #24334a;
+    --border-color: #334155;
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Acentos para plazos */
+    --accent-indigo: #6366f1;
+    --accent-indigo-light: #818cf8;
+    --accent-amber: #f59e0b;
+    --accent-amber-light: #fbbf24;
+    --accent-emerald: #10b981;
+    --accent-emerald-light: #34d399;
+}
+
+/* Contenedor principal */
+.metas-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* --- Hero / Encabezado Principal --- */
+.metas-hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .metas-hero {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+
+.metas-hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.metas-badge {
+    align-self: flex-start;
+    padding: 0.35rem 0.85rem;
+    background-color: rgba(99, 102, 241, 0.15);
+    color: var(--accent-indigo-light);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.class-encabezado h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.metas-highlight {
+    color: var(--accent-indigo-light);
+}
+
+.metas-hero-text h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.metas-intro {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Marco de imagen Hero */
+.metas-hero-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-frame {
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-card);
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-caption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Manifiesto / Filosofía --- */
+.manifesto-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-indigo);
+    border-radius: 0.75rem;
+    padding: 1.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.manifesto-box h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0;
+}
+
+.manifesto-box p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.manifesto-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Layout de Filas de Metas --- */
+.metas-rows-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.meta-row-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.85rem;
+    padding: 2rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.meta-row-card:hover {
+    border-color: #475569;
+}
+
+/* Distintivos por plazo */
+.tag-plazo {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.tag-corto {
+    background-color: rgba(99, 102, 241, 0.15);
+    color: var(--accent-indigo-light);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.tag-mediano {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--accent-amber-light);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.tag-largo {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--accent-emerald-light);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.row-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.row-header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+}
+
+.row-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Contenido de cada Fila */
+.row-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .row-content {
+        grid-template-columns: 1.4fr 0.8fr;
+    }
+}
+
+.meta-descripcion {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.subseccion-meta {
+    margin-bottom: 1.25rem;
+}
+
+.subseccion-meta:last-child {
+    margin-bottom: 0;
+}
+
+.subseccion-meta h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.4rem 0;
+}
+
+.subseccion-meta p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 0.5rem 0;
+}
+
+.subseccion-meta strong {
+    color: #ffffff;
+}
+
+/* Columna Multimedia / Imagen de Fila */
+.row-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-image-box {
+    width: 100%;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-dark);
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Cita / Frase Final --- */
+.metas-footer-quote {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.metas-footer-quote blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    max-width: 42rem;
+    margin: 0 auto;
+    line-height: 1.6;
+}

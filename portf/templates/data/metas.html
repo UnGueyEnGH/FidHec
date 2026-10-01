@@ -1,0 +1,193 @@
+{% extends "herencia/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="metas-container">
+    
+    <!-- Encabezado Principal / Hero Section -->
+    <div class="metas-hero">
+        <div class="metas-hero-text">
+            <span class="metas-badge">Mi Hoja de Ruta & Filosofía Personal</span>
+            
+            <div class="class-encabezado">
+                <h1>Mis Metas y el <span class="metas-highlight">Camino a Futuro</span></h1>
+
+            </div>
+
+            <h2>Construyendo mi propio espacio: entre ecuaciones, realidades y lo que de verdad importa.</h2>
+            
+            <p class="metas-intro">
+                A veces me detengo a pensar en cómo se cruzan las cosas que estudio con la vida real. Por un lado están los circuitos, las leyes de la física, la lógica estricta y los códigos que tienen que funcionar sin margen de error. Por el otro, está la vida cotidiana: las decisiones difíciles, el estrés de la rutina y esa necesidad profunda de encontrar un rumbo que no se mida solo en logros académicos o en números en una cuenta bancaria.
+            </p>
+            <p class="metas-intro">
+                Esta página no es un curriculum ni una lista fría de propósitos de año nuevo. Es más bien un mapa mental y sincero de a dónde quiero dirigir mi energía. Es el recordatorio de por qué me desvelo estudiando y hacia dónde quiero caminar, manteniendo los pies en la tierra y el corazón en su lugar.
+            </p>
+        </div>
+
+        <div class="metas-hero-image-wrapper">
+            <div class="image-frame">
+                <img src="{% static 'images/metas/vision_futuro.jpg' %}" alt="Visión de vida y futuro">
+            </div>
+            <p class="image-caption">El punto de partida: trabajo constante y objetivos claros.</p>
+        </div>
+    </div>
+
+    <!-- Sección Intermedia: Manifiesto / Filosofía de Vida -->
+    <article class="meta-card manifesto-box">
+        <h3>El Motor Detrás de Todo: ¿Por qué hago lo que hago?</h3>
+        <p>
+            Durante mucho tiempo nos enseñan que el éxito es una carrera de velocidad donde gana el que acumula más títulos o el que presume el trabajo más ruidoso. Yo no lo veo así. Para mí, la verdadera ingeniería de la vida consiste en diseñar un sistema estable: uno donde la carga no rompa la estructura y donde la energía se invierta en lo que realmente aporta valor.
+        </p>
+        <p>
+            Quiero que la tecnología y la ciencia sean herramientas para transformar mi entorno, no cadenas que me aten a una oficina 24/7 sin tiempo para vivir. Cada paso académico y personal que doy está pensado para acercarme a esa libertad real: la libertad de decidir mi tiempo y proteger a los míos.
+        </p>
+    </article>
+
+    <!-- ESTRELLA DEL DISEÑO: 3 FILAS ORDENADAS -->
+    <div class="metas-rows-layout">
+
+        <!-- FILA 1: CORTO PLAZO -->
+        <article class="meta-row-card card-corto">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Fase 1: El Presente En Marcha</span>
+                <h2>Metas a Corto Plazo</h2>
+                <p class="row-subtitle">Poniendo los cimientos: Academia, investigación y apoyo incondicional.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        El corto plazo es el terreno del esfuerzo diario. Es donde la teoría se convierte en disciplina y donde los compromisos personales se demuestran con hechos, no solo con palabras.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>1. La Ruta Académica: De la Ingeniería al Doctorado</h4>
+                        <p>
+                            Mi prioridad absoluta en este momento es concluir la carrera en <strong>Ingeniería Eléctrica</strong>. Pero no me quiero quedar ahí con el título colgado en la pared. La meta inmediata es enganchar directamente con una especialización profunda y posterior entrada a un programa de <strong>doctorado</strong>.
+                        </p>
+                        <p>
+                            Quiero meterme de lleno a la <strong>investigación científica y tecnológica</strong>. Me apasiona entender los problemas desde sus entrañas, experimentar, fallar, ajustar y aportar soluciones reales. La academia y la investigación son el vehículo que elegí para ponerme a prueba intelectualmente y generar un impacto tangible.
+                        </p>
+                    </div>
+
+                    <div class="subseccion-meta">
+                        <h4>2. Un Nuevo Comienzo para Mi Novia</h4>
+                        <p>
+                            A la par de los libros y los laboratorios, hay un proyecto de vida que me mueve desde adentro: sacar a mi novia de la dinámica familiar tan pesada y desgastante en la que vive actualmente. 
+                        </p>
+                        <p>
+                            Mi meta es brindarle un entorno seguro, estable y lleno de paz; un respaldo real donde no tenga que preocuparse por tensiones innecesarias. Quiero ser ese apoyo constante para que ella pueda sanar, reencontrarse con sus propios proyectos y desarrollar todo su potencial como persona y profesional en total libertad.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/metas/corto_plazo_estudios.jpg' %}" alt="Estudios de ingeniería e investigación">
+                    </div>
+                    <p class="image-caption">Horas de estudio, proyectos e investigación en progreso.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- FILA 2: MEDIANO PLAZO -->
+        <article class="meta-row-card card-mediano">
+            <div class="row-header">
+                <span class="tag-plazo tag-mediano">Fase 2: Consolidación y Transición</span>
+                <h2>Metas a Mediano Plazo</h2>
+                <p class="row-subtitle">Estabilidad laboral, autonomía y desarrollo profesional sostenido.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        El mediano plazo es el puente entre la preparación académica y el proyecto de vida consolidado. Es la etapa donde el conocimiento se transforma en sustento y la independencia se vuelve una realidad firme.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>1. Inserción Profesional y Crecimiento Académico</h4>
+                        <p>
+                            A la par del desarrollo de mis estudios doctorales e investigaciones, la meta es posicionarme en el ámbito laboral de la ingeniería e investigación. Buscar proyectos y colaboraciones que no solo me permitan aplicar lo aprendido, sino empezar a construir una independencia económica sólida.
+                        </p>
+                    </div>
+
+                    <div class="subseccion-meta">
+                        <h4>2. Consolidación del Entorno Personal y Autonomía</h4>
+                        <p>
+                            Asegurar que el espacio de paz que le brinde a mi novia esté totalmente afianzado. Establecer dinámicas de vida saludables, libertad de tiempo y las condiciones idóneas para que ambos sigamos creciendo individualmente y como pareja antes de dar pasos familiares más grandes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/metas/mediano_plazo_trabajo.jpg' %}" alt="Desarrollo profesional e independencia">
+                    </div>
+                    <p class="image-caption">Traduciendo el conocimiento en independencia y estabilidad.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- FILA 3: LARGO PLAZO -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-largo">Fase 3: El Horizonte</span>
+                <h2>Metas a Largo Plazo</h2>
+                <p class="row-subtitle">Tranquilidad, hogar, familia y un impacto positivo sin perder la esencia.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <p class="meta-descripcion">
+                        Cuando miro a futuro, no me imagino rodeado de lujos innecesarios ni metido en una competencia constante de apariencias. El horizonte que busco es mucho más humano, firme y sereno.
+                    </p>
+
+                    <div class="subseccion-meta">
+                        <h4>1. Paz con el Presente y Cero Codicia</h4>
+                        <p>
+                            Mi meta más grande es aprender a vivir en paz con el presente. Tener los recursos suficientes para vivir con total dignidad y comodidad, pero manteniendo la mente limpia de avaricia o codicia. No quiero caer en la trampa de querer siempre más a costa de mi salud mental o de mis valores.
+                        </p>
+                    </div>
+
+                    <div class="subseccion-meta">
+                        <h4>2. Un Hogar Propio y Cómodo</h4>
+                        <p>
+                            Obtener un lugar de mi plena pertenencia. Un espacio propio, bien construido y acogedor, donde pueda llegar al final del día a descansar sin la incertidumbre de nada ni de nadie. Un verdadero refugio.
+                        </p>
+                    </div>
+
+                    <div class="subseccion-meta">
+                        <h4>3. Familia y Paternidad Presente</h4>
+                        <p>
+                            Quiero tener hijos y, sobre todo, tener el tiempo y la madurez para verlos crecer de buena manera. Deseo ser un padre presente que los acompañe, los guíe con el ejemplo y les dé las herramientas necesarias para que ellos puedan descubrir y realizar sus propios sueños.
+                        </p>
+                    </div>
+
+                    <div class="subseccion-meta">
+                        <h4>4. Empleo Digno, Sustento y Apoyo a la Comunidad</h4>
+                        <p>
+                            Quiero desempeñarme en un trabajo con una remuneración económica sólida que me permita cubrir sobradamente mis necesidades, asegurar el bienestar de mi familia y tener el margen para apoyar a mi comunidad. Todo esto bajo una condición no negociable: **sin sacrificar mi bienestar personal ni mi salud física o mental**.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row-media">
+                    <div class="card-image-box">
+                        <img src="{% static 'images/metas/largo_plazo_hogar.jpg' %}" alt="Hogar tranquilo y vida en paz">
+                    </div>
+                    <p class="image-caption">El objetivo final: paz, familia y un refugio propio.</p>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Reflexión Final / Cierre Inspirador -->
+    <div class="metas-footer-quote">
+        <blockquote>
+            "Al final del día, la mejor ecuación es la que da como resultado un hogar tranquilo, gente amada que crece a tu lado y la certeza de haber hecho lo correcto sin traicionarte a ti mismo."
+        </blockquote>
+    </div>
+
+</section>
+{% endblock %}
