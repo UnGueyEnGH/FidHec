@@ -278,6 +278,7 @@ html, body {
     width: 100%;
 }
 
+/* --- ESCRITORIO (Estilos Base) --- */
 .navbar-container {
     max-width: 103rem;
     margin: 0 auto;
@@ -287,18 +288,48 @@ html, body {
     justify-content: space-between;
 }
 
-/* Ajustes específicos para móviles */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* --- MÓVIL EN VERTICAL (Pantallas hasta 768px) --- */
 @media (max-width: 768px) {
     .navbar-container {
-        flex-direction: column; /* Apila el logo y la lista en vertical */
-        gap: 0.5rem;
+        flex-direction: column; /* Alinea el logo arriba y la lista abajo */
+        align-items: center;
+        gap: 1rem;
     }
 
     .navbar-menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
+        width: 100%;            /* Ocupa todo el ancho */
+        display: block;         /* Asegura que no se oculte */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Apila los enlaces uno debajo de otro */
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: block;         /* Hace que abarque todo el ancho del botón */
+        padding: 0.5rem 1rem;
     }
 }
 
