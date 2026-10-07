@@ -8,6 +8,8 @@ urlpatterns = [
 
 
     path('lugares/', views.lugares, name='lugares'),
-    
+
+    path('colorimetria/', views.colorimetria, name='colorimetria'),
+
 ]
 

@@ -1,0 +1,492 @@
+{% extends "herencia/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Enlace a la hoja de estilos compartida con el formato de metas -->
+<link rel="stylesheet" href="{% static 'css/metas.css' %}">
+
+<!-- Estilos exclusivos para reordenar en filas y autoajustar imágenes completas -->
+<style>
+    .colorimetria-page .row-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+
+    .colorimetria-page .row-media {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 1.5rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .colorimetria-page .row-media .card-image-box {
+        flex: 0 1 auto !important;
+        width: fit-content !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .colorimetria-page .row-media .card-image-box img {
+        max-width: 550px !important; 
+        width: 100% !important; 
+        height: auto !important; 
+        max-height: none !important; 
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px var(--border-color); 
+    }
+
+    .colorimetria-page .row-media .image-caption {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .colorimetria-page .row-text {
+        width: 100% !important;
+    }
+
+    /* Bloque individual para cada tendencia en el Paso 5 */
+    .colorimetria-page .tendencia-item {
+        margin-bottom: 2rem;
+        padding: 1.25rem;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+    }
+
+    .colorimetria-page .tendencia-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Título de cada tendencia (h5) */
+    .colorimetria-page .tendencia-item h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-color, #212529);
+        margin-bottom: 0.5rem;
+    }
+
+    /* Texto descriptivo de la tendencia */
+    .colorimetria-page .tendencia-item .meta-descripcion {
+        margin-bottom: 1rem;
+    }
+</style>
+
+<section class="metas-container colorimetria-page">
+
+    <!-- Encabezado Principal / Hero Section -->
+    <div class="metas-hero">
+        <div class="metas-hero-text">
+            <span class="metas-badge">Manual Práctico: Teoría del Color para el Desarrollo Web</span>
+            
+            <div class="class-encabezado">
+                <h1>La teoría del color: <span class="metas-highlight">Un manual para principiantes</span></h1>
+            </div>
+
+            <h2>Una introducción breve y concisa al mundo de la colorimetría.</h2>
+            
+            <p class="metas-intro">
+                Este manual está diseñado como un tutorial paso a paso para principiantes.
+            </p>
+            <p class="metas-intro">
+                Su objetivo principal es enseñarte a aplicar la teoría del color para estructurar sitios web visualmente atractivos, coherentes y profesionales, evitando el aspecto informal o empírico que tienen muchas páginas web.
+            </p>
+        </div>
+
+        <div class="metas-hero-image-wrapper">
+            <div class="image-frame">
+                <img src="{% static 'images/colorimetria/estructuracion_visual.jpg' %}" alt="Teoría y Psicología del Color">
+            </div>
+            <p class="image-caption">Estructuración visual y armonía cromática en desarrollo web.</p>
+        </div>
+    </div>
+
+    <!-- Sección Intermedia: Manifiesto / Filosofía de Introducción -->
+    <article class="meta-card manifesto-box">
+        <h3>Introducción: Los errores más comunes en la web</h3>
+        <p>Muchos sitios web transmiten un aspecto poco profesional o confuso debido a fallas recurrentes de diseño:</p>
+        <ul class="competencies">
+            <li>Falta de calidad o resolución en las imágenes.</li>
+            <li>Saturación de elementos y falta de espacios en blanco ("falta de aire").</li>
+            <li>Elección poco afortunada o combinación excesiva de tipografías.</li>
+            <li>Exceso de colores o combinaciones inarmónicas.</li>
+        </ul>
+        <p>Aprender a dominar el color soluciona de forma directa el balance visual y guía la interacción del usuario.</p>
+    </article>
+
+    <!-- LISTADO DE PASOS EN LAYOUT DE FILAS -->
+    <div class="metas-rows-layout">
+
+        <!-- Paso 1 -->
+        <article class="meta-row-card card-corto">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Paso 1</span>
+                <h2>Comprender la Psicología del Color</h2>
+                <p class="row-subtitle">Evoca emociones y conceptos específicos en el cerebro humano.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="subseccion-meta">
+                    <div class="row-text">
+                        <p class="meta-descripcion">
+                            Antes de definir un esquema, debes establecer qué sensaciones quieres transmitir y la filosofía de tu negocio o proyecto.
+                        </p>
+                        
+                        <h4>La intención detrás del color</h4>
+                        <p class="meta-descripcion">
+                            El color no es un mero adorno ni un detalle superficial; es una de las herramientas de composición más potentes en el diseño. Antes de seleccionar una paleta o definir la armonía cromática de una pieza, es esencial precisar la atmósfera que deseas construir y la emoción que buscas despertar. El color altera la percepción del espacio, dirige la mirada, genera peso visual y establece el ritmo de toda la composición. Diseñar con intención cromática significa transformar la luz y el matiz en un lenguaje formal capaz de comunicar sin necesidad de palabras.
+                        </p>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/intencion_color.jpg' %}" alt="Psicología y Emociones del Color">
+                            </div>
+                        </div>
+                        
+                        <h4>Percepción, equilibrio y emoción</h4>
+                        <p class="meta-descripcion">
+                            La psicología del color en el diseño analiza cómo la luz y las longitudes de onda impactan en la percepción humana y en la sensibilidad espacial. Las tonalidades cálidas tienden a avanzar, proyectando proximidad, dinamismo o tensión, mientras que las frías retroceden, sugiriendo profundidad, serenidad y contención. El equilibrio de una obra depende en gran medida de cómo dialogan estas fuerzas: una combinación acertada de saturación, contraste y valor de luz no solo estructura visualmente el espacio, sino que define el estado de ánimo de la experiencia estética.
+                        </p>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/equilibrio_color.jpg' %}" alt="Equilibrio cromático y emociones">
+                            </div>
+                        </div>
+
+                        <h4>Significado de los Colores</h4>
+                        <p class="meta-descripcion">
+                            El manejo deliberado del significado de los colores en el desarrollo de contenido es fundamental porque los colores transmiten mensajes y sensaciones de forma instantánea, actuando como un canal de comunicación no verbal antes de que la audiencia procese el texto.
+                        </p>
+                        
+                        <ul class="competencies">
+                            <li><strong>Rojo:</strong> Amor, energía, fuerza, poder, pasión, peligro.</li>
+                            <li><strong>Rosa:</strong> Feminidad, infancia, dulzura.</li>
+                            <li><strong>Naranja:</strong> Amistad, valor, confianza, éxito, calidez.</li>
+                            <li><strong>Amarillo:</strong> Felicidad, optimismo, energía, vitalidad, entusiasmo.</li>
+                            <li><strong>Verde:</strong> Tierra, medio ambiente, dinero, nuevo, fertilidad, frescura.</li>
+                            <li><strong>Azul:</strong> Paz, confianza, salud, seriedad, calma, tradición, profesionalidad.</li>
+                            <li><strong>Morado / Violeta:</strong> Espiritualidad, lujo, ambición, sabiduría, misterio.</li>
+                            <li><strong>Negro / Oscuro:</strong> Elegancia, formalidad, protección, clase, sofisticación.</li>
+                        </ul>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/psicologia_del_color.jpg' %}" alt="Equilibrio cromático y emociones">
+                            </div>
+                        </div>                        
+
+                        <p class="image-caption"><strong>Regla de identidad visual:</strong> Si la marca o negocio ya cuenta con un logotipo corporativo, el esquema de colores de la web debe ser consistente con él.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Paso 2 -->
+        <article class="meta-row-card card-mediano">
+            <div class="row-header">
+                <span class="tag-plazo tag-mediano">Paso 2</span>
+                <h2>Limitar la Cantidad de Colores</h2>
+                <p class="row-subtitle">Evita sobrecargar la web para no perder la concentración del usuario.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <div class="subseccion-meta">
+                        <h4>El principio de la uva (Punto focal)</h4>
+                        <p class="meta-descripcion">
+                            Cuando utilizas una paleta repleta de tonos vivos en todo el entorno, el ojo no sabe dónde posarse primero, ya que la uva compite en igualdad de condiciones con el resto de los elementos. Al saturar cada rincón de la composición, la carga cromática se distribuye de manera uniforme y diluyes el punto focal; la uva deja de ser el centro de atención inmediato para convertirse en un detalle más dentro de un paisaje vibrante.
+                        </p>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/ejemplo_uva_foco.jpg' %}" alt="Ejemplo de enfoque por color sin acento">
+                            </div>
+                        </div>
+
+                        <p class="meta-descripcion">
+                            Por el contrario, cuando aíslas el color y dejas el fondo en tonos grises o neutros, la uva pasa a concentrar toda la fuerza visual de la imagen. Al eliminar las distracciones del entorno, la diferencia de saturación genera un contraste absoluto que dirige tu mirada de forma automática e inevitable hacia la uva, demostrando cómo puedes guiar la atención de quien observa mediante el uso estratégico del color.
+                        </p>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/ejemplo_uva_foco2.jpg' %}" alt="Ejemplo de enfoque por color con punto focal">
+                            </div>
+                            <p class="image-caption">Comparativa visual del principio del punto focal.</p>
+                        </div>
+
+                        <p class="meta-descripcion">
+                            En diseño web, la "uva" representa tu elemento clave de conversión: un botón de compra, un formulario de contacto o una tabla de precios, por lo que dominar la psicología y el contraste del color te permite controlar hacia dónde mira tu audiencia y qué siente al interactuar con tu contenido.
+                        </p>                    
+                        
+                        <h4>Estructura de paleta reducida (Máximo 3 o 4 colores)</h4>
+                        <ol class="competencies">
+                            <li><strong>1 o 2 colores neutros:</strong> Grises, blancos o tonos suavizados para dividir bloques, fondos y textos.</li>
+                            <li><strong>1 color secundario o de enlace:</strong> Para navegación general, hipervínculos o detalles menores.</li>
+                            <li><strong>1 color de acento / llamada a la acción (CTA):</strong> Un tono brillante reservado exclusivamente para botones e interacciones prioritarias.</li>
+                        </ol>                
+                        
+                        <p class="image-caption">
+                            <strong>Recuerda:</strong> El color no es solo decoración, es una herramienta de dirección. Si todo destaca en tu diseño, nada destaca.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Paso 3 -->
+        <article class="meta-row-card card-corto">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Paso 3</span>
+                <h2>Aplicar la Regla de Proporción 60 - 30 - 10</h2>
+                <p class="row-subtitle">Garantiza un equilibrio visual perfecto sin recargar la vista.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="subseccion-meta">
+                    <div class="row-text">
+                        <h4>Distribución recomendada para el balance visual</h4>
+                        <p class="meta-descripcion">
+                            La regla 60-30-10 es una fórmula clásica de diseño y composición que sirve para distribuir los colores en un espacio de forma armónica y visualmente equilibrada, evitando que el resultado se sienta caótico. Se aplica dividiendo la paleta visual en tres roles específicos:
+                        </p>
+                        
+                        <ul class="competencies">
+                            <li><strong>60% Color Dominante:</strong> Es el color base que sostiene toda la composición. Suele ser un tono neutro o suave (blanco, gris, crema) usado en fondos para dar sensación de espacio.</li>
+                            <li><strong>30% Color Secundario:</strong> Es el tono que crea contraste con el fondo y le da carácter al diseño. Se aplica en bloques de texto secundarios, tarjetas o contenedores.</li>
+                            <li><strong>10% Color de Acento (Punto focal):</strong> Es el color más vivo o llamativo. Su función es guiar la mirada hacia lo más importante: botones CTA o elementos estratégicos.</li>
+                        </ul>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/regla_60_30_10.jpg' %}" alt="Distribución 60-30-10 en diseño web">
+                            </div>
+                            <p class="image-caption">Proporción recomendada para el balance de color.</p>
+                        </div>
+
+                        <h4>Saturación, brillo y fatiga visual</h4>
+                        <p class="meta-descripcion">
+                            Cuanto más saturados y brillantes sean los colores que elijas, más llamativos resultarán, pero también cansarán más rápido la vista del usuario. Observa las siguientes paletas para comparar el nivel de fatiga visual:
+                        </p>
+                        
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/saturacion_vs_suave.jpg' %}" alt="Diferencia entre paleta altamente saturada y paleta equilibrada">                        
+                            </div>
+                            <p class="image-caption">
+                                <strong>Evalúa tu comodidad visual:</strong> Nota cuánto tiempo resistes la mirada en cada paleta antes de sentir cansancio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Paso 4 -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-largo">Paso 4</span>
+                <h2>Dominar el Contraste y la Jerarquía Visual</h2>
+                <p class="row-subtitle">El pilar fundamental para que el contenido sea legible y el mensaje sea claro.</p>
+            </div>
+            
+            <div class="row-content">
+                <div class="subseccion-meta">
+                    <div class="row-text">
+                        <h4>¿Qué es el contraste y cómo utilizarlo?</h4>
+                        <p class="meta-descripcion">
+                            El contraste no es solo una elección estética, sino la herramienta principal para construir orden y jerarquía visual. Cuando diferencias claramente los elementos principales de los secundarios —ya sea mediante el color, el tamaño o el valor de luminosidad—, guías la mirada del usuario de forma intuitiva.
+                        </p>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/alto_contraste_ejemplo.jpg' %}" alt="Ejemplo de interfaz web con alto contraste">
+                            </div>
+                            <p class="image-caption">Uso de espacios en blanco y niveles de saturación recomendados.</p>
+                        </div>
+
+                        <p class="meta-descripcion">
+                            Domina el equilibrio entre destacar y no abrumar: un contraste desmedido en múltiples puntos simultáneos genera un impacto agresivo que satura la vista. La clave reside en reservar las combinaciones de alto contraste únicamente para los puntos focales y llamadas a la acción.
+                        </p>
+                        
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/alto_contraste_ejemplo_1.jpg' %}" alt="Ejemplo de interfaz web con alto contraste controlado">
+                            </div>
+                            <p class="image-caption">Menos ruido, más impacto. El alto contraste solo funciona cuando le das espacio para respirar.</p>
+                        </div>
+
+                        <h4>Tipos de contraste y buenas prácticas</h4>
+                        <ul class="competencies">
+                            <li><strong>Contraste de Tono y Luminosidad:</strong> Utiliza textos muy oscuros sobre fondos claros o viceversa.</li>
+                            <li><strong>El poder del blanco / espacio negativo:</strong> Un fondo blanco con amplio espacio alrededor hace que cualquier elemento de color salte a la vista sin esfuerzo.</li>
+                            <li><strong>Evita la saturación excesiva:</strong> Apuesta por tonos mate o neutros para áreas de lectura extensa para garantizar la accesibilidad.</li>
+                        </ul>
+                        <div class="row-media">
+                            <p class="image-caption"><strong>Recuerda:</strong>  Si todo destaca, nada destaca:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Paso 5: Déjate guiar por el conocimiento de los expertos -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-mediano">Paso 5</span>
+                <h2>Déjate Guiar por el Conocimiento de los Expertos</h2>
+                <p class="row-subtitle">Análisis profundo de corrientes estéticas y herramientas clave para dominar el diseño de interfaces.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="subseccion-meta">
+                    <div class="row-text">
+                        <h4>Algunas Modas y Tendencias Actuales</h4>
+                        <p class="meta-descripcion">
+                            El diseño de interfaces moderno evoluciona constantemente para equilibrar la estética visual con la usabilidad cognitiva. Adoptar enfoques probados por profesionales no solo garantiza una apariencia atractiva, sino que resuelve problemas concretos de navegabilidad, retención de usuarios y conversión.
+                        </p>
+
+                        <!-- Tendencia 1 -->
+                        <h5>1. Colores planos con tonos suaves (<a href="https://aguayo.co/es/blog-aguayo-experiencia-usuario/flat-design-influencia-ux/">Flat Design</a>)</h5>
+                        <p class="meta-descripcion">
+                            Esta técnica elimina distracciones, sombras excesivas o efectos recargados para dar prioridad absoluta a la usabilidad. La selección de tonos pastel, neutros o desaturados busca transmitir un ambiente de calma, pulcritud y sobriedad técnica.
+                        </p>
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/colores_planos_suaves.jpg' %}" alt="Interfaz web basada en colores planos y tonos suaves">
+                            </div>
+                            <p class="image-caption">Ejemplo de distribución con colores planos suaves que priorizan la usabilidad y la lectura extendida.</p>
+                        </div>
+
+                        <!-- Tendencia 2 -->
+                        <h5>2. Degradados suaves (<a href="https://www.awwwards.com/ejemplos-de-degradados-de-color-en-el-diseno-web.html">Soft Gradients & Mesh Gradients</a>)</h5>
+                        <p class="meta-descripcion">
+                            Cuando una paleta de colores planos resulta demasiado rígida, los degradados tenues introducen textura, fluidez y volumen visual sin romper la estructura de la página.
+                        </p>
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/degradado_suave_tendencia.jpg' %}" alt="Uso de degradados suaves para aportar profundidad en la interfaz">
+                            </div>
+                            <p class="image-caption">Aplicación de degradados sutiles como fondo para enriquecer la textura visual de la interfaz.</p>
+                        </div>
+
+                        <!-- Tendencia 3 -->
+                        <h5>3. Utilizar una sola gama cromática (<a href="https://www.canva.com/es_mx/aprende/como-disenar-colores-monocromaticos/">Diseño Monocromático</a>)</h5>
+                        <p class="meta-descripcion">
+                        Consiste en articular toda la arquitectura gráfica a partir de un único color primario, generando variaciones mediante el ajuste de luminosidad y saturación para consolidar la identidad de marca.
+                        </p>
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/monocromatico_ejemplo.jpg' %}" alt="Composición monocromática utilizando variaciones de brillo y saturación">
+                            </div>
+                            <p class="image-caption">Estructura monocromática bien equilibrada mediante variantes de brillo y saturación.</p>
+                        </div>
+
+                        <!-- Tendencia 4 -->
+                        <h5>4. Alto contraste (<a href="https://www.diegoamorin.com/contraste-diseno-web/">Focalización Directa</a>)</h5>
+                        <p class="meta-descripcion">
+                            Esta metodología parte de una base cromática neutra e integra un único color acento de alto impacto para dirigir de forma directa la atención hacia botones de compra o llamados a la acción (CTA).
+                        </p>
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/alto_contraste_ejemplo.jpg' %}" alt="Ejemplos de combinación por contraste y gama cromática">
+                            </div>
+                            <p class="image-caption">Puntos de alto contraste estratégico para dirigir la atención hacia llamados a la acción.</p>
+                        </div>
+
+                        <!-- Tendencia 5 -->                            <h5>5. Diseño Reductivo (<a href="https://blog.adobe.com/es/publish/2022/05/10/diseno-minimalista">Minimalismo</a>)</h5>
+                        <p class="meta-descripcion">
+                            Es la eliminación consciente de cualquier adorno prescindible. Al despojar a la interfaz de elementos innecesarios, los espacios en blanco adquieren protagonismo estructurado.
+                        </p>
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/minimalismo_ejemplo.jpg' %}" alt="Interfaz minimalista centrada en el contenido esencial">
+                            </div>
+                            <p class="image-caption">Interfaz minimalista centrada en el contenido esencial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Bloque de Herramientas -->
+        <article class="meta-row-card card-mediano">
+            <div class="row-header">
+                <span class="tag-plazo tag-largo">Recursos</span>
+                <h2>Herramientas Maravillosas para el Esquema Perfecto</h2>
+                <p class="row-subtitle">Recursos gratuitos para seleccionar combinaciones creadas por profesionales.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <div class="subseccion-meta">
+                        <h4>Plataformas digitales y exploración comunitaria</h4>
+                        <p class="meta-descripcion">
+                            Por suerte, existen herramientas gratuitas en Internet que harán este trabajo por ti. Otros usuarios y profesionales ya han creado miles de combinaciones preciosas y bien equilibradas listas para utilizar, así que solo tendrás que elegir una que se adapte a tu proyecto:
+                        </p>
+
+                        <div class="herramienta-item">
+                            <p class="meta-descripcion">
+                                <strong>Adobe Color CC:</strong> Es una de las mejores opciones online para encontrar esquemas armónicos. Allí puedes explorar combinaciones creadas por miles de usuarios, ordenarlas por fecha, ver las más populares o buscar por términos clave acordes a tu nicho (por ejemplo: "tecnología", "ecología" o "minimalista"). Puedes guardar la URL de la paleta elegida o ajustar sutilmente sus valores en el círculo cromático interactivo, aunque es muy aconsejable realizar los menores cambios posibles, ya que la mayoría de los esquemas publicados cuentan con proporciones probadas y listas para implementarse.
+                            </p>
+                        </div>
+
+                        <div class="row-media">
+                            <div class="card-image-box">
+                                <img src="{% static 'images/colorimetria/adobe_color_interface.jpg' %}" alt="Interfaz de exploración de paletas en Adobe Color CC">
+                            </div>
+                            <p class="image-caption"><a href="https://color.adobe.com/es/create/color-wheel">Interfaz de exploración de paletas en Adobe Color CC</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Checklist de Instrucciones y Trucos Imprescindibles -->
+        <article class="meta-row-card card-largo">
+            <div class="row-header">
+                <span class="tag-plazo tag-corto">Instrucciones</span>
+                <h2>Instrucciones, Trucos y Consideraciones Imprescindibles</h2>
+                <p class="row-subtitle">Listado final de reglas operativas para aplicar el color con éxito.</p>
+            </div>
+
+            <div class="row-content">
+                <div class="row-text">
+                    <ul class="competencies">
+                        <li>
+                            <strong>• Sé consistente:</strong> Si tu negocio ya cuenta con colores corporativos, ajústate a ellos. Toda tu identidad visual debe ir en la misma línea: no puedes tener las paredes impresas en azul, el logotipo en verde, los vehículos en rojo y el sitio web en morado.
+                        </li>
+                        <li>
+                            <strong>• Piensa en lo que quieres transmitir:</strong> Olvídate de tus colores favoritos. La meta no es poner tu tono preferido, sino elegir los colores que mejores resultados comerciales y emocionales van a dar con tus clientes.
+                        </li>
+                        <li>
+                            <strong>• Si todo destaca, nada destaca:</strong> Define un único elemento principal por pantalla que quieras resaltar con tu color más llamativo, evitando que los demás elementos compitan con él.
+                        </li>
+                        <li>
+                            <strong>• Controla el brillo:</strong> Cuanto más brillantes sean los colores, antes se cansará la vista del usuario; no abuses de ellos en secciones extensas.
+                        </li>
+                        <li>
+                            <strong>• El poder del espacio en blanco:</strong> Un fondo blanco con espacios amplios hace que cualquier botón o caja de color salte a la vista inmediatamente. En fondos oscuros, un elemento blanco actuará como un faro en la noche.
+                        </li>
+                        <li>
+                            <strong>• Mantén una paleta básica:</strong> Limítate a no más de 3 o 4 colores (en ocasiones 2 son suficientes). Utilízalos en todos los bloques para preservar la coherencia en toda la web.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

@@ -10,3 +10,6 @@ def metas(request):
 
 def lugares(request):
     return render(request, 'data/lugares_maravillosos.html')
+
+def colorimetria(request):
+    return render(request, 'data/colorimetria.html')

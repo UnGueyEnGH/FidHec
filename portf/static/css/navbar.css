@@ -1,0 +1,195 @@
+:root {
+    /* --- Fondos Claros y Espaciosos --- */
+    --bg-main: #f4f9f6;          /* Verde neblina ultra claro, fresco y luminoso */
+    --bg-card: #ffffff;          /* Blanco puro para dar elevación y limpieza */
+    --bg-surface-soft: #eaf3ee;  /* Verde menta suave para elementos secundarios */
+    --border-color: #d1e2d8;      /* Borde verde-grisáceo tenue */
+    --border-dark: #b8d5c4;        /* Borde con mayor contraste */
+
+    /* --- Tipografía --- */
+    --text-primary: #0d2818;      /* Verde selva muy oscuro para lectura principal */
+    --text-secondary: #2d5a44;    /* Verde follaje medio para subtítulos y texto secundario */
+    --text-muted: #5e8371;        /* Verde menta apagado para detalles secundarios */
+    --text-on-accent: #ffffff;    /* Blanco para texto sobre botones o badges */
+
+    /* --- Acentos Quetzal: Verdes Esmeralda --- */
+    --emerald-primary: #059669;   /* Esmeralda vibrante */
+    --emerald-deep: #046c4e;      /* Esmeralda oscuro */
+    --emerald-light: #d1fae5;     /* Destello menta claro */
+    --emerald-bg: #ecfdf5;        /* Fondo suave esmeralda */
+
+    /* --- Acentos Quetzal: Azules & Turquesas --- */
+    --blue-primary: #0284c7;      /* Azul turquesa/cielo saturado */
+    --blue-deep: #0369a1;         /* Azul selva profundo */
+    --blue-light: #e0f2fe;        /* Azul agua pastel */
+
+    /* --- Plazos y Acentos Cálidos --- */
+    --accent-indigo: #4f46e5;
+    --accent-indigo-light: #eef2ff;
+    --accent-amber: #d97706;
+    --accent-amber-light: #fef3c7;
+    --accent-warm: #e11d48;
+}
+/* ==========================================
+   BARRA DE NAVEGACIÓN
+   ========================================== */
+.navbar-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+.navbar-container {
+    max-width: 103rem;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Marca / Logotipo fijo a la izquierda */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+/* Botón Hamburguesa (Oculto en escritorio) */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    line-height: 0;
+}
+
+.navbar-toggle:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-surface-soft);
+}
+
+.hamburger-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Menú de Navegación */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--emerald-primary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ==========================================
+   AJUSTE DE CONTENEDOR EN MÓVIL
+   ========================================== */
+.navbar-container {
+    max-width: 103rem;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza que queden en la misma fila */
+    align-items: center !important;
+    justify-content: space-between !important; /* Logo a la izquierda, hamburguesa a la derecha */
+    position: relative;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin: 0 !important; /* Elimina márgenes automáticos que centren el logo */
+}
+
+/* ==========================================
+   ADAPTATIVO PARA MÓVILES (Grilla 2x2 en menú desplegado)
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex !important; /* Muestra el botón a la derecha */
+        align-items: center;
+        justify-content: center;
+        margin: 0 !important;
+    }
+
+    .navbar-menu {
+        display: none; /* Oculto hasta hacer clic */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .navbar-menu.is-active {
+        display: block !important;
+    }
+
+    /* Grilla de 2 columnas x 2 filas */
+    .nav-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 0.75rem 1rem !important;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 0.5rem;
+        text-align: center;
+        border-radius: 0.375rem;
+        background-color: var(--bg-surface-soft, rgba(0,0,0,0.03));
+    }
+}
